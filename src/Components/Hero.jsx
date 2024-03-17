@@ -44,12 +44,9 @@ useEffect(() => {
   return () => clearInterval(intervalId);
 }, [colors, currentColorIndex]);
 
-
-
-
   return (
-    <section className="h-[680px]">
-      <div className="mx-auto h-full flex shadow-2xl overflow-hidden relative">
+    <section className="h-[680px] snap-start relative">
+      <div className="mx-auto h-full flex  overflow-hidden relative">
         <div style={{ color: currentColor }} className="z-10 text-6xl duration-2000 ease-in-out">
           <RxCornerTopLeft className="absolute" />
           <RxCornerTopLeft className="absolute bottom-0 -rotate-90 " />
@@ -86,7 +83,7 @@ useEffect(() => {
               <SiRedux />
               <FaNodeJs />
             </div>
-            <div style={{ borderColor: currentColor }} className=" absolute h-40 w-40 rotate-45 rounded-full -translate-x-24 mt-96 duration-2000 ease-in-out bg-transparent border-2"></div>
+            <div style={{ borderColor: currentColor }} className=" absolute h-40 w-40 rotate-45 rounded-full transition-colors -translate-x-24 mt-96 duration-2000 ease-in-out bg-transparent border-2"></div>
           </div>
           {/* sol yazi */}
           <div className=" h-60 w-3/4 ml-auto mt-36 flex justify-center">
@@ -114,7 +111,7 @@ useEffect(() => {
           <div>
             <GiPoolTriangle style={{ color: currentColor }} className="text-6xl absolute top-8 right-2/3 duration-2000 ease-in-out" />
           </div>
-          <div style={{ borderColor: currentColor }} className="absolute duration-2000 ease-in-out h-40 w-40 rotate-180 rounded-full translate-x-24 right-0 mt-28 bg-transparent border-2 "></div>
+          <div style={{ borderColor: currentColor }} className="absolute duration-2000 transition-colors ease-in-out h-40 w-40 rotate-180 rounded-full translate-x-24 right-0 mt-28 bg-transparent border-2 "></div>
         </div>
       </div>
     </section>

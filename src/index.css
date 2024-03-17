@@ -4,17 +4,25 @@
 @tailwind components;
 @tailwind utilities;
 
-.h1{
+html{
+  scroll-snap-type: y mandatory;
+}
+
+.h1 {
   @apply font-semibold text-7xl
 }
-.h2{
+.h2 {
   @apply text-5xl
 }
-.p{
+.p {
   @apply text-[17px]
 }
 .gradient-border {
   border: 2px solid ; /* Border kalınlığı */
   border-image: linear-gradient(to right, #ff0000, #00ff00); /* Gradient renkler */
   border-image-slice: 1; /* Border'ın tamamını kaplaması için kesme değeri */
+}
+
+.scroll-smooth {
+  scroll-behavior: smooth;
 }
