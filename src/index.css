@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pathway+Extreme:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -9,20 +9,25 @@ html{
 }
 
 .h1 {
-  @apply font-semibold text-7xl
+  @apply font-semibold text-[8vh]
 }
 .h2 {
-  @apply text-5xl
+  @apply text-[7vh]
 }
 .p {
-  @apply text-[17px]
+  @apply text-[2.5vh] font-medium leading-[3.7vh]
 }
+
 .gradient-border {
   border: 2px solid ; /* Border kalınlığı */
   border-image: linear-gradient(to right, #ff0000, #00ff00); /* Gradient renkler */
   border-image-slice: 1; /* Border'ın tamamını kaplaması için kesme değeri */
 }
 
+
+.circle{
+  @apply absolute duration-2000 transition-colors ease-in-out h-40 sm:hidden xl:flex w-40 rounded-full bg-transparent border-2
+}
 .scroll-smooth {
   scroll-behavior: smooth;
 }

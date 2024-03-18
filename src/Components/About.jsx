@@ -1,14 +1,14 @@
 
 export default function About() {
   return (
-    <section className="h-screen snap-start bg-white">
+    <section className="h-screen snap-start bg-sky-100">
       <div className="container mx-auto flex h-screen">
         {/* ilk */}
-        <div className="bg-red-500 w-full">
+        <div className=" w-full">
           <div className="flex md:flex-row flex-col mt-10 justify-center items-center">
-            <div className="md:w-1/2 flex flex-col gap-5 xl:px-12 mt-15">
-              <h2 className="h2 bg-red-200">About Myself</h2>
-              <p className="text-[#2E5041]">
+            <div className="md:w-1/2 xl:w-full flex flex-col gap-5 xl:px-12 mt-15">
+              <h2 className="h2">About Myself</h2>
+              <p className="p text-black">
                 {" "}
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta
                 sequi porro in molestias ratione quis, dignissimos dolorum
@@ -19,11 +19,11 @@ export default function About() {
           </div>
         </div>
         {/* ikinci */}
-        <div className="bg-blue-500 w-full">
-          <div className="flex md:flex-row flex-col mt-10 justify-center items-center">
-            <div className="md:w-1/2 flex flex-col gap-5 xl:px-12 mt-15">
-              <h2 className="h2 bg-red-200">About Myself</h2>
-              <p className="text-[#2E5041]">
+        <div className=" w-full">
+          <div className="flex md:flex-row flex-col mt-10">
+            <div className="xl:w-full sm:w-1/2 flex flex-col gap-5 xl:px-12 mt-15">
+              <h2 className="h2">About Myself</h2>
+              <p className="text-black p">
                 {" "}
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta
                 sequi porro in molestias ratione quis, dignissimos dolorum

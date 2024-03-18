@@ -44,34 +44,36 @@ useEffect(() => {
   return () => clearInterval(intervalId);
 }, [colors, currentColorIndex]);
 
+
   return (
-    <section className="h-[680px] snap-start relative">
+    <section className="h-[90vh]  snap-start relative">
       <div className="mx-auto h-full flex  overflow-hidden relative">
-        <div style={{ color: currentColor }} className="z-10 text-6xl duration-2000 ease-in-out">
-          <RxCornerTopLeft className="absolute" />
-          <RxCornerTopLeft className="absolute bottom-0 -rotate-90 " />
+        <div style={{ color: currentColor }} className="z-10 text-[6vh] duration-2000 transition-colors  ease-in-out">
+          <RxCornerTopLeft className="absolute h-[7vh]" />
+          <RxCornerTopLeft className="absolute bottom-0  -rotate-90 " />
           <RxCornerTopLeft className="absolute top-0 right-0 rotate-90 " />
           <RxCornerTopLeft className="absolute bottom-0 right-0 -rotate-180 " />
         </div>
         {/* img */}
-        <div className="w-72 rounded-md absolute z-10 right-1/4 bottom-36">
+        <div className=" absolute w-[18vw] z-10 right-[15vw] bottom-[20vh] ">
           <img
-            className=" w-full h-full ml-5 rounded-full object-cover"
+            className=" rounded-full"
             src={pp}
             alt=""
           />
         </div>
         {/* sol */}
-        <div className="bg-gradient-to-r  from-pink-500 to-purple-500 h-full w-full overflow-hidden relative">
+        <div className="bg-gradient-to-r from-pink-500 to-purple-500 h-full w-full overflow-hidden relative">
           {/* sol tasarim */}
           <div>
-            <div style={{ color: currentColor }} className="flex absolute duration-2000 ease-in-out bottom-10 left-1/4">
+            <div style={{ color: currentColor }} className="flex text-[2vh] absolute duration-2000 ease-in-out transition-colors bottom-[5vh] left-[30vw]">
               <GoDot />
               <GoDot />
               <GoDot />
               <GoDot />
             </div>
-            <div style={{ color: currentColor }} className="absolute text-2xl duration-2000 ease-in-out left-48 top-40 grid grid-cols-2 gap-2">
+            {/* iconlar */}
+            <div style={{ color: currentColor }} className="absolute text-[3vh] transition-colors duration-2000 ease-in-out left-[13vw] top-[22vh] grid grid-cols-2 gap-[1vh]">
               <BiLogoTailwindCss />
               <PiFileCss />
               <BsFiletypeScss />
@@ -83,35 +85,37 @@ useEffect(() => {
               <SiRedux />
               <FaNodeJs />
             </div>
-            <div style={{ borderColor: currentColor }} className=" absolute h-40 w-40 rotate-45 rounded-full transition-colors -translate-x-24 mt-96 duration-2000 ease-in-out bg-transparent border-2"></div>
-          </div>
+            {/* sol circle */}
+            <div style={{ borderColor: currentColor }} className=" circle -translate-x-24 bottom-20 "></div> 
+             {/* pool tasarim */}
+            <div>
+            <GiPoolTriangle style={{ color: currentColor }} className="text-[6vh] transition-colors absolute top-[4vh] right-[20vw] duration-2000 ease-in-out" />
+            </div>
+            <div>
+            <GiPoolTriangle style={{ color: currentColor }} className="text-[7vh] transition-colors absolute bottom-[15vh] left-[20vw] duration-2000 rotate-45 ease-in-out" />
+            </div>
+            <div style={{ color: currentColor }} className=" transition-colors text-[2vh] absolute duration-2000 ease-in-out bottom-[11vh] right-[2vw]">
+              <GoDot />
+              <GoDot />
+              <GoDot />
+              <GoDot />
+            </div>  
+            <div style={{ borderColor: currentColor }} className=" circle translate-x-24  right-0 top-20 "></div>
+          
+          <div/>
           {/* sol yazi */}
-          <div className=" h-60 w-3/4 ml-auto mt-36 flex justify-center">
-            <div className="flex flex-col gap-5 px-20 py-5 ">
+            <div className="flex flex-col w-[40vw] mt-[23vh] ml-[20vw]">
               <div>
-                <motion.h1 className="h1 text-orange-200">Hi I'm <span className="font-bold">TUTUS</span></motion.h1>
+                <motion.h1 className="h1 leading-[4vh] text-orange-100">Hi I'm <span className="font-bold">TUTUS</span></motion.h1>
                 <h2 style={{ color: currentColor }} className={`w-fit font-semibold transition-colors duration-2000 ease-in-out h2`}>Frontend Developer</h2>
-                  <div style={{borderColor: currentColor}} className=" duration-2000 ease-in-out rounded-full w-[436px] mt-2 border-2">
+                  <div style={{borderColor: currentColor}} className=" transition-colors duration-2000 ease-in-out rounded-full w-[32.4vw] mt-[0.4vh] border-[0.2vh]">
                   </div>
               </div>
-              <p className="p text-orange-200">
+              <p className="p text-orange-100 mt-[1vh]">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident recusandae maiores saepe nisi iste reiciendis.
               </p>
             </div>
-          </div>
         </div>
-        {/* sag */}
-        <div className="h-full w-1/2 bg-gradient-to-r relative from-purple-500 to-orange-400">
-          <div style={{ color: currentColor }} className=" absolute duration-2000 ease-in-out bottom-20 right-7">
-            <GoDot />
-            <GoDot />
-            <GoDot />
-            <GoDot />
-          </div>
-          <div>
-            <GiPoolTriangle style={{ color: currentColor }} className="text-6xl absolute top-8 right-2/3 duration-2000 ease-in-out" />
-          </div>
-          <div style={{ borderColor: currentColor }} className="absolute duration-2000 transition-colors ease-in-out h-40 w-40 rotate-180 rounded-full translate-x-24 right-0 mt-28 bg-transparent border-2 "></div>
         </div>
       </div>
     </section>
