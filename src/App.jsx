@@ -7,10 +7,10 @@ import Navbar from './Components/Navbar'
 function App() {
 
   return (
-    <div className="App snap-y h-screen snap-mandatory overflow-y-auto">
-      <Navbar/>
+    <div className="snap-y h-screen snap-mandatory overflow-y-scroll">
       <Hero />
       <About />
+      <Navbar/>
     </div>
   )
 }

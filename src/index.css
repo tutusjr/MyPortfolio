@@ -1,18 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Pathway+Extreme:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-html{
-  scroll-snap-type: y mandatory;
-}
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
 .h1 {
-  @apply font-semibold text-[8vh]
+  @apply font-semibold text-[8vh] font-mono
 }
 .h2 {
-  @apply text-[7vh]
+  @apply text-[7vh] font-mono
 }
 .p {
   @apply text-[2.5vh] font-medium leading-[3.7vh]
@@ -24,10 +27,14 @@ html{
   border-image-slice: 1; /* Border'ın tamamını kaplaması için kesme değeri */
 }
 
+.scroll-item {
+  scroll-snap-align: start; /* or center, end, etc. */
+  transition: all 3s; /* Define the duration and easing */
+}
+
 
 .circle{
   @apply absolute duration-2000 transition-colors ease-in-out h-40 sm:hidden xl:flex w-40 rounded-full bg-transparent border-2
 }
-.scroll-smooth {
-  scroll-behavior: smooth;
-}
+
+

@@ -46,7 +46,7 @@ useEffect(() => {
 
 
   return (
-    <section className="h-[90vh]  snap-start relative">
+    <section id="home" className="h-[90vh] scroll-item relative">
       <div className="mx-auto h-full flex  overflow-hidden relative">
         <div style={{ color: currentColor }} className="z-10 text-[6vh] duration-2000 transition-colors  ease-in-out">
           <RxCornerTopLeft className="absolute h-[7vh]" />
@@ -55,7 +55,7 @@ useEffect(() => {
           <RxCornerTopLeft className="absolute bottom-0 right-0 -rotate-180 " />
         </div>
         {/* img */}
-        <div className=" absolute w-[18vw] z-10 right-[15vw] bottom-[20vh] ">
+        <div className=" absolute w-[18vw] z-10 right-[21vw] bottom-[20vh] ">
           <img
             className=" rounded-full"
             src={pp}
@@ -73,7 +73,7 @@ useEffect(() => {
               <GoDot />
             </div>
             {/* iconlar */}
-            <div style={{ color: currentColor }} className="absolute text-[3vh] transition-colors duration-2000 ease-in-out left-[13vw] top-[22vh] grid grid-cols-2 gap-[1vh]">
+            <div style={{ color: currentColor }} className="absolute text-[3vh] transition-colors duration-2000 ease-in-out left-[10vw] top-[22vh] grid grid-cols-2 gap-[1vh]">
               <BiLogoTailwindCss />
               <PiFileCss />
               <BsFiletypeScss />
@@ -104,11 +104,11 @@ useEffect(() => {
           
           <div/>
           {/* sol yazi */}
-            <div className="flex flex-col w-[40vw] mt-[23vh] ml-[20vw]">
-              <div>
+            <div className="flex flex-col w-[40vw] mt-[23vh] ml-[16vw]">
+              <div className="flex flex-col gap-[0.3vh]">
                 <motion.h1 className="h1 leading-[4vh] text-orange-100">Hi I'm <span className="font-bold">TUTUS</span></motion.h1>
-                <h2 style={{ color: currentColor }} className={`w-fit font-semibold transition-colors duration-2000 ease-in-out h2`}>Frontend Developer</h2>
-                  <div style={{borderColor: currentColor}} className=" transition-colors duration-2000 ease-in-out rounded-full w-[32.4vw] mt-[0.4vh] border-[0.2vh]">
+                <h2 style={{ color: currentColor }} className='w-fit font-semibold transition-colors duration-2000 ease-in-out h2'>Frontend Developer</h2>
+                  <div style={{borderColor: currentColor}} className=" transition-colors duration-2000 ease-in-out rounded-full w-[37.5vw] mt-[0.4vh] border-[0.3vh]">
                   </div>
               </div>
               <p className="p text-orange-100 mt-[1vh]">

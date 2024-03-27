@@ -1,7 +1,9 @@
 
+
 export default function About() {
   return (
-    <section className="h-screen snap-start bg-sky-100">
+    <section id="about" className="h-screen scroll-item bg-sky-100">
+      
       <div className="container mx-auto flex h-screen">
         {/* ilk */}
         <div className=" w-full">
@@ -34,6 +36,6 @@ export default function About() {
           </div>
         </div>
       </div>
-    </section>
+      </section>
   );
 }

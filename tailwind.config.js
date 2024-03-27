@@ -21,7 +21,8 @@ export default {
         '3000': '3000ms',
       },
       fontFamily: {
-        'sans': ['Pathway Extreme', 'sans-serif']
+        'sans': ['Pathway Extreme', 'sans-serif'],
+        'mono': ['Merriweather', 'serif'],
       }
     },
   },

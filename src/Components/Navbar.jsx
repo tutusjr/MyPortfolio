@@ -1,17 +1,16 @@
-import { CiHome } from "react-icons/ci";
+
+import {Links} from "../data/Links.js"
 
 export default function Navbar() {
   return (
-    <section className='absolute z-10'>
-        <div className="flex flex-col sm:hidden text-xl gap-4 fixed right-[100px] bottom-[100px] ">
-        <a href="#">
-      <CiHome/>
-        </a>
-        <a href="#">linkler</a>
-        <a href="#">linkler</a>
-        <a href="#">linkler</a>
-        <a href="#">linkler</a>
+        <div className="flex flex-col z-10 text-xl gap-4 fixed right-[10vw] bottom-[20vh] ">
+          {Links.map((link) => (
+            <a
+              key={link.id}
+              href={link.url}>
+              {link.name}  
+            </a>
+          ))}
         </div>
-    </section>
   )
 }
