@@ -36,12 +36,15 @@ export default function Hero() {
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setCurrentColorIndex((prevIndex) => (prevIndex + 1) % colors.length);
-      setCurrentColor(colors[currentColorIndex]); // Her renk değişiminde mevcut rengi güncelle
+        setCurrentColorIndex((prevIndex) => (prevIndex + 1) % colors.length);
     }, 4000);
 
     return () => clearInterval(intervalId);
-  }, [colors, currentColorIndex]);
+}, [colors]);
+
+useEffect(() => {
+    setCurrentColor(colors[currentColorIndex]);
+}, [currentColorIndex]);
 
   return (
     <section id="home" className="h-[90vh] scroll-item relative ">
@@ -76,7 +79,7 @@ export default function Hero() {
             {/* iconlar */}
             <div
             className="absolute text-[3vh] transition-colors duration-2000 ease-in-out left-[10vw] top-[22vh] grid grid-cols-2 gap-[1vh] animate-pulse"
-            style={{ color: currentColor, }}
+            style={{ color: currentColor }}
             >
                 <BiLogoTailwindCss />
                 <PiFileCss />
