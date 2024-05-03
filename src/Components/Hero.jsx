@@ -15,40 +15,41 @@ import { SiRedux } from "react-icons/si";
 import { FaNodeJs } from "react-icons/fa";
 import { GiPoolTriangle } from "react-icons/gi";
 import { motion } from "framer-motion";
+import bgImage from "../assets/bgImages/bg-mountain.jpg";
 
 import { useState, useEffect } from "react";
 
 export default function Hero() {
   const colors = [
-   "#27374D",
-   "#252A34",
-   "#561C24",
-   "#3C2A21",
-   "#5F0F40",
-   "#430A5D",
-   "#262A56"
+    "#CDE8E5",
+    "#7B66FF",
+    "#7AB2B2",
+    "#A3FFD6",
+    "#F6B17A",
+    "#4D869C",
+    "#F0EDCF",
+  ];
 
- ];
+  const [currentColorIndex, setCurrentColorIndex] = useState(0);
 
- const [currentColorIndex, setCurrentColorIndex] = useState(0);
+  const [currentColor, setCurrentColor] = useState("#F0EDCF");
 
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentColorIndex((prevIndex) => (prevIndex + 1) % colors.length);
+      setCurrentColor(colors[currentColorIndex]); // Her renk değişiminde mevcut rengi güncelle
+    }, 4000);
 
-const [currentColor, setCurrentColor] = useState("#800080");
-
-useEffect(() => {
-  const intervalId = setInterval(() => {
-    setCurrentColorIndex(prevIndex => (prevIndex + 1) % colors.length);
-    setCurrentColor(colors[currentColorIndex]); // Her renk değişiminde mevcut rengi güncelle
-  }, 4000);
-
-  return () => clearInterval(intervalId);
-}, [colors, currentColorIndex]);
-
+    return () => clearInterval(intervalId);
+  }, [colors, currentColorIndex]);
 
   return (
-    <section id="home" className="h-[90vh] scroll-item relative">
-      <div className="mx-auto h-full flex  overflow-hidden relative">
-        <div style={{ color: currentColor }} className="z-10 text-[6vh] duration-2000 transition-colors  ease-in-out">
+    <section id="home" className="h-[90vh] scroll-item relative ">
+      <div className="mx-auto h-full flex overflow-hidden relative transition-none">
+        <div
+          style={{ color: currentColor }}
+          className="z-10 text-[6vh] duration-2000 transition-colors ease-in-out"
+        >
           <RxCornerTopLeft className="absolute h-[7vh]" />
           <RxCornerTopLeft className="absolute bottom-0  -rotate-90 " />
           <RxCornerTopLeft className="absolute top-0 right-0 rotate-90 " />
@@ -56,66 +57,94 @@ useEffect(() => {
         </div>
         {/* img */}
         <div className=" absolute w-[18vw] z-10 right-[21vw] bottom-[20vh] ">
-          <img
-            className=" rounded-full"
-            src={pp}
-            alt=""
-          />
+          <img className=" rounded-full filter " src={pp} alt="" />
         </div>
         {/* sol */}
-        <div className="bg-gradient-to-r from-pink-500 to-purple-500 h-full w-full overflow-hidden relative">
+        <div className="h-full w-full overflow-hidden relative">
+          <img className="absolute h-full w-full " src={bgImage} alt="bg-image" />
           {/* sol tasarim */}
           <div>
-            <div style={{ color: currentColor }} className="flex text-[2vh] absolute duration-2000 ease-in-out transition-colors bottom-[5vh] left-[30vw]">
+            <div
+              style={{ color: currentColor }}
+              className="flex text-[2vh] absolute duration-2000 ease-in-out transition-colors bottom-[5vh] left-[30vw]"
+            >
               <GoDot />
               <GoDot />
               <GoDot />
               <GoDot />
             </div>
             {/* iconlar */}
-            <div style={{ color: currentColor }} className="absolute text-[3vh] transition-colors duration-2000 ease-in-out left-[10vw] top-[22vh] grid grid-cols-2 gap-[1vh]">
-              <BiLogoTailwindCss />
-              <PiFileCss />
-              <BsFiletypeScss />
-              <PiFileHtmlLight />
-              <FaReact />
-              <RiJavascriptLine />
-              <TbBrandTypescript />
-              <TbBrandNextjs />
-              <SiRedux />
-              <FaNodeJs />
+            <div
+            className="absolute text-[3vh] transition-colors duration-2000 ease-in-out left-[10vw] top-[22vh] grid grid-cols-2 gap-[1vh] animate-pulse"
+            style={{ color: currentColor, }}
+            >
+                <BiLogoTailwindCss />
+                <PiFileCss />
+                <BsFiletypeScss />
+                <PiFileHtmlLight />
+                <FaReact />
+                <RiJavascriptLine />
+                <TbBrandTypescript />
+                <TbBrandNextjs />
+                <SiRedux />
+                <FaNodeJs />
             </div>
             {/* sol circle */}
-            <div style={{ borderColor: currentColor }} className=" circle -translate-x-24 bottom-20 "></div> 
-             {/* pool tasarim */}
+            <div
+              style={{ borderColor: currentColor }}
+              className=" circle -translate-x-24 bottom-20 "
+            ></div>
+            {/* pool tasarim */}
             <div>
-            <GiPoolTriangle style={{ color: currentColor }} className="text-[6vh] transition-colors absolute top-[4vh] right-[20vw] duration-2000 ease-in-out" />
+              <GiPoolTriangle
+                style={{ color: currentColor }}
+                className="text-[6vh] rotating transition-colors absolute top-[4vh] right-[20vw] duration-2000 ease-in-out"
+              />
             </div>
             <div>
-            <GiPoolTriangle style={{ color: currentColor }} className="text-[7vh] transition-colors absolute bottom-[15vh] left-[20vw] duration-2000 rotate-45 ease-in-out" />
+              <GiPoolTriangle
+                style={{ color: currentColor }}
+                className="text-[7vh] rotating-2 transition-colors absolute bottom-[15vh] left-[20vw] duration-2000 rotate-45 ease-in-out"
+              />
             </div>
-            <div style={{ color: currentColor }} className=" transition-colors text-[2vh] absolute duration-2000 ease-in-out bottom-[11vh] right-[2vw]">
+            <div
+              style={{ color: currentColor }}
+              className=" transition-colors text-[2vh] absolute duration-2000 ease-in-out bottom-[11vh] right-[2vw]"
+            >
               <GoDot />
               <GoDot />
               <GoDot />
               <GoDot />
-            </div>  
-            <div style={{ borderColor: currentColor }} className=" circle translate-x-24  right-0 top-20 "></div>
-          
-          <div/>
-          {/* sol yazi */}
+            </div>
+            <div
+              style={{ borderColor: currentColor }}
+              className=" circle translate-x-24  right-0 top-20 "
+            ></div>
+
+            <div />
+            {/* sol yazi */}
             <div className="flex flex-col w-[40vw] mt-[23vh] ml-[16vw]">
-              <div className="flex flex-col gap-[0.3vh]">
-                <motion.h1 className="h1 leading-[4vh] text-orange-100">Hi I'm <span className="font-bold">TUTUS</span></motion.h1>
-                <h2 style={{ color: currentColor }} className='w-fit font-semibold transition-colors duration-2000 ease-in-out h2'>Frontend Developer</h2>
-                  <div style={{borderColor: currentColor}} className=" transition-colors duration-2000 ease-in-out rounded-full w-[37.5vw] mt-[0.4vh] border-[0.3vh]">
-                  </div>
+              <div className="flex flex-col gap-[0.3vh] z-10">
+                <motion.h1 className="h1 leading-[4vh] text-orange-100">
+                  Hi I'm <span className="font-bold z-10">TUTUS</span>
+                </motion.h1>
+                <h2
+                  style={{ color: currentColor }}
+                  className=" z-10 w-fit font-semibold transition-colors duration-2000 ease-in-out h2"
+                >
+                  Frontend Developer
+                </h2>
+                <div
+                  style={{ borderColor: currentColor }}
+                  className=" transition-colors duration-2000 ease-in-out rounded-full w-[37.5vw] mt-[0.4vh] border-[0.3vh]"
+                ></div>
               </div>
-              <p className="p text-orange-100 mt-[1vh]">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident recusandae maiores saepe nisi iste reiciendis.
+              <p className="p z-10 text-orange-100 mt-[1vh]">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Provident recusandae maiores saepe nisi iste reiciendis.
               </p>
             </div>
-        </div>
+          </div>
         </div>
       </div>
     </section>

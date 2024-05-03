@@ -2,13 +2,12 @@
 
 export default function About() {
   return (
-    <section id="about" className="h-screen scroll-item bg-sky-100">
-      
-      <div className="container mx-auto flex h-screen">
+    <section id="about" className="h-screen scroll-item transition-none bg-whitesmoke">
+      <div className="container mt-10 mx-auto flex transition-none">
         {/* ilk */}
-        <div className=" w-full">
+        <div className=" w-full transition-none ">
           <div className="flex md:flex-row flex-col mt-10 justify-center items-center">
-            <div className="md:w-1/2 xl:w-full flex flex-col gap-5 xl:px-12 mt-15">
+            <div className="md:w-1/2 xl:w-full h-full flex flex-col gap-5 xl:px-12 mt-15">
               <h2 className="h2">About Myself</h2>
               <p className="p text-black">
                 {" "}
@@ -23,7 +22,7 @@ export default function About() {
         {/* ikinci */}
         <div className=" w-full">
           <div className="flex md:flex-row flex-col mt-10">
-            <div className="xl:w-full sm:w-1/2 flex flex-col gap-5 xl:px-12 mt-15">
+            <div className="xl:w-full sm:w-1/2 h-full flex flex-col gap-5 xl:px-12 mt-15">
               <h2 className="h2">About Myself</h2>
               <p className="text-black p">
                 {" "}
