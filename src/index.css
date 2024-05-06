@@ -25,12 +25,6 @@ html{
   @apply text-[2.5vh] font-medium leading-[3.7vh]
 }
 
-.gradient-border {
-  border: 2px solid ; /* Border kalınlığı */
-  border-image: linear-gradient(to right, #ff0000, #00ff00); /* Gradient renkler */
-  border-image-slice: 1; /* Border'ın tamamını kaplaması için kesme değeri */
-}
-
 .scroll-item {
   scroll-snap-align: start; /* or center, end, etc. */
   transition: color 3s; /* Define the duration and easing */
@@ -39,30 +33,6 @@ html{
   @apply absolute duration-2000 transition-colors ease-in-out h-40 sm:hidden xl:flex w-40 rounded-full bg-transparent border-2
 }
 
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-@keyframes rotate2 {
-  from {
-    transform: rotate(360deg);
-  }
-  to {
-    transform: rotate(0);
-  }
-}
 
-.rotating {
-  animation: rotate 20s linear infinite;
-  transform-origin: center;
-}
-.rotating-2{
-  animation: rotate2 20s linear infinite;
-  transform-origin: center;
-}
 
 

@@ -24,7 +24,7 @@ export default function About() {
           <div className="flex md:flex-row flex-col mt-10">
             <div className="xl:w-full sm:w-1/2 h-full flex flex-col gap-5 xl:px-12 mt-15">
               <h2 className="h2">About Myself</h2>
-              <p className="text-black p">
+              <p className="text-white p">
                 {" "}
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta
                 sequi porro in molestias ratione quis, dignissimos dolorum

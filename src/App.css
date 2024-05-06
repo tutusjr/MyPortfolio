@@ -1,0 +1,65 @@
+@keyframes color-change {
+    0%{color: #CDE8E5}
+    14%{color: #7B66FF}
+    28%{color: #7AB2B2}
+    42%{color: #A3FFD6}
+    56%{color: #F6B17A}
+    70%{color: #4D869C}
+    84%{color: #F0EDCF}
+    100%{color: #CDE8E5}
+}  
+@keyframes color-change-icons {
+    0%{fill: #CDE8E5}
+    14%{fill: #7B66FF}
+    28%{fill: #7AB2B2}
+    42%{fill: #A3FFD6}
+    56%{fill: #F6B17A}
+    70%{fill: #4D869C}
+    84%{fill: #F0EDCF}
+    100%{fill: #CDE8E5}
+}  
+
+
+.color-changing{
+    animation: color-change 16s infinite;
+}
+
+
+.color-changing-icons svg{
+    animation: color-change-icons 16s infinite;
+}
+
+.color-changing-icons{
+    animation: color-change-icons 16s infinite;
+}
+
+@keyframes twinkle {
+    0% { transform: scale(0); opacity: 1; }
+    100% { transform: scale(1); opacity: 0; }
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+.star {
+    position: absolute;
+    width: 0.1vw;
+    height: 0.2vh;
+    background: whitesmoke;
+    border-radius: 100%;
+    z-index: 10;
+    box-shadow: 0px 0px 10px white,
+    0px 0px 10px white,
+    0px 0px 5px white,
+    0px 0px 5px white,
+    0px 0px 30px white,
+    0px 0px 30px white;
+    animation: twinkle 4s infinite;
+}
+
+
+
+
+

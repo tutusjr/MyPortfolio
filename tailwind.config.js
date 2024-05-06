@@ -23,7 +23,12 @@ export default {
       fontFamily: {
         'sans': ['Pathway Extreme', 'sans-serif'],
         'mono': ['Merriweather', 'serif'],
-      }
+      },
+      animation: {
+        'twinkle-slow': 'twinkle 6s infinite',
+        'twinkle-fast': 'twinkle 2s infinite',
+        'twinkle-normal': 'twinkle 3s infinite',
+      },
     },
   },
   plugins: [

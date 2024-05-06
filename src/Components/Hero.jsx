@@ -17,41 +17,27 @@ import { GiPoolTriangle } from "react-icons/gi";
 import { motion } from "framer-motion";
 import bgImage from "../assets/bgImages/bg-mountain.jpg";
 
-import { useState, useEffect } from "react";
-
 export default function Hero() {
-  const colors = [
-    "#CDE8E5",
-    "#7B66FF",
-    "#7AB2B2",
-    "#A3FFD6",
-    "#F6B17A",
-    "#4D869C",
-    "#F0EDCF",
-  ];
-
-  const [currentColorIndex, setCurrentColorIndex] = useState(0);
-
-  const [currentColor, setCurrentColor] = useState("#F0EDCF");
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-        setCurrentColorIndex((prevIndex) => (prevIndex + 1) % colors.length);
-    }, 4000);
-
-    return () => clearInterval(intervalId);
-}, [colors]);
-
-useEffect(() => {
-    setCurrentColor(colors[currentColorIndex]);
-}, [currentColorIndex]);
 
   return (
     <section id="home" className="h-[90vh] scroll-item relative ">
       <div className="mx-auto h-full flex overflow-hidden relative transition-none">
+        {/* yildizlar */}
+        <div className="stars">
+        <div className="star top-[10vh] right-[12vw] animate-twinkle-fast "></div>
+        <div className="star top-[15vh] right-[44vw] animate-twinkle-normal"></div>
+        <div className="star top-[4vh] right-[36vw] animate-twinkle-fast"></div>
+        <div className="star top-[35vh] left-[5vw] animate-twinkle-slow "></div>
+        <div className="star top-[20vh] left-[1vw] animate-twinkle-fast"></div>
+        <div className="star top-[40vh] left-[23vw] animate-twinkle-slow"></div>
+        <div className="star top-[20vh] left-[35vw] animate-twinkle-fast"></div>
+        <div className="star top-[5vh] left-[42vw] animate-twinkle-fast"></div>
+        <div className="star top-[8vh] left-[12vw] animate-twinkle-fast"></div>
+        <div className="star top-[30vh] right-[3vw] animate-twinkle-fast"></div>
+        </div>
+        {/* kenarliklar */}
         <div
-          style={{ color: currentColor }}
-          className="z-10 text-[6vh] duration-2000 transition-colors ease-in-out"
+          className="z-10 text-[6vh] color-changing duration-2000 transition-colors ease-in-out"
         >
           <RxCornerTopLeft className="absolute h-[7vh]" />
           <RxCornerTopLeft className="absolute bottom-0  -rotate-90 " />
@@ -68,8 +54,7 @@ useEffect(() => {
           {/* sol tasarim */}
           <div>
             <div
-              style={{ color: currentColor }}
-              className="flex text-[2vh] absolute duration-2000 ease-in-out transition-colors bottom-[5vh] left-[30vw]"
+              className="flex text-[2vh] color-changing absolute duration-2000 ease-in-out transition-colors bottom-[5vh] left-[30vw]"
             >
               <GoDot />
               <GoDot />
@@ -78,10 +63,9 @@ useEffect(() => {
             </div>
             {/* iconlar */}
             <div
-            className="absolute text-[3vh] transition-colors duration-2000 ease-in-out left-[10vw] top-[22vh] grid grid-cols-2 gap-[1vh] animate-pulse"
-            style={{ color: currentColor }}
+            className="absolute text-[3vh] ease-in-out left-[10vw] top-[22vh] grid grid-cols-2 gap-[1vh] color-changing-icons"
             >
-                <BiLogoTailwindCss />
+                <BiLogoTailwindCss/>
                 <PiFileCss />
                 <BsFiletypeScss />
                 <PiFileHtmlLight />
@@ -92,37 +76,25 @@ useEffect(() => {
                 <SiRedux />
                 <FaNodeJs />
             </div>
-            {/* sol circle */}
-            <div
-              style={{ borderColor: currentColor }}
-              className=" circle -translate-x-24 bottom-20 "
-            ></div>
             {/* pool tasarim */}
-            <div>
+            <div className="color-changing-icons rotating ">
               <GiPoolTriangle
-                style={{ color: currentColor }}
-                className="text-[6vh] rotating transition-colors absolute top-[4vh] right-[20vw] duration-2000 ease-in-out"
+                className="text-[6vh] absolute top-[4vh] right-[20vw]  "
               />
             </div>
-            <div>
+            <div className="color-changing-icons ">
               <GiPoolTriangle
-                style={{ color: currentColor }}
-                className="text-[7vh] rotating-2 transition-colors absolute bottom-[15vh] left-[20vw] duration-2000 rotate-45 ease-in-out"
+                className="text-[7vh] color-changing absolute  bottom-[15vh] left-[20vw]  rotate-45 "
               />
             </div>
             <div
-              style={{ color: currentColor }}
-              className=" transition-colors text-[2vh] absolute duration-2000 ease-in-out bottom-[11vh] right-[2vw]"
+              className="  text-[2vh] color-changing absolute  bottom-[11vh] right-[2vw]"
             >
               <GoDot />
               <GoDot />
               <GoDot />
               <GoDot />
             </div>
-            <div
-              style={{ borderColor: currentColor }}
-              className=" circle translate-x-24  right-0 top-20 "
-            ></div>
 
             <div />
             {/* sol yazi */}
@@ -132,14 +104,12 @@ useEffect(() => {
                   Hi I'm <span className="font-bold z-10">TUTUS</span>
                 </motion.h1>
                 <h2
-                  style={{ color: currentColor }}
-                  className=" z-10 w-fit font-semibold transition-colors duration-2000 ease-in-out h2"
+                  className=" z-10 w-fit font-semibold color-changing ease-in-out h2"
                 >
                   Frontend Developer
                 </h2>
                 <div
-                  style={{ borderColor: currentColor }}
-                  className=" transition-colors duration-2000 ease-in-out rounded-full w-[37.5vw] mt-[0.4vh] border-[0.3vh]"
+                  className=" color-changing ease-in-out rounded-full w-[37.5vw] mt-[0.4vh] border-[0.3vh]"
                 ></div>
               </div>
               <p className="p z-10 text-orange-100 mt-[1vh]">
